@@ -1,0 +1,22 @@
+<!-- how to count a number of duplicate element are in array -->
+<!-- <script>
+    const arr = [1,2,3,2,4,5,5,3,1];
+    var count = 0;
+    for(let i=0;i<arr.length;i++){
+        for(j=i+1;j<arr.length;j++){
+            if(arr[i] == arr[j]){
+                count++;
+                break;
+            };
+        };
+    };
+    console.log(count);
+</script> -->
+
+<!-- or -->
+<script>
+    const arr = [1,2,3,2,4,5,5,3,];
+    const set = new Set(arr);
+    const result = arr.length - set.size;
+    console.log(result);
+</script>
