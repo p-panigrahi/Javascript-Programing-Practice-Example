@@ -1,0 +1,36 @@
+<!-- Write a function that takes an array of objects representing students and their grades, and returns the average grade for each student. -->
+
+<script>
+    function arrayOfObject(students){
+    <!-- initialzi empty object -->
+        var newObject = {};
+        // to read object value by using "for of"
+        for(const student of students){
+            // create totalAvg variable
+            var totalAvg = 0;
+            // then read student grade 
+            for (const Grade of student.grade){
+                // add student grade to totalAvg
+                totalAvg += Grade
+            }
+            // then find the total Avarage 
+            var averageGrade = totalAvg / student.grade.length;
+            // then add student name and avg grade to newObject
+            newObject[student.name] = averageGrade;
+        }
+        // return newObject
+        return newObject;
+}
+const student = [
+    {
+        name : 'Prabhudutta',
+        grade : [30,40,60,70]
+    },
+    {
+        name : 'Amit Panigrahi',
+        grade : [38,40,68,70]
+    }
+]
+const result = arrayOfObject(student);
+console.log(result);
+</script>

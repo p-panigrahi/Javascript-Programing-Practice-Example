@@ -1,0 +1,24 @@
+<!-- 
+* write a function which takes an array of numbers as argument.  
+* Inside the function, check the first value in the array.  
+* If the value is <=0 or >5, return the array as it is without any changes.  
+* If the value of the first element is between 1 and 5, then keep the first element as it is, 
+* from the second element on - till the last element, multiply it with the value of the first element and return the array. -->
+
+<script>
+    function takeArray(arr){
+        // first we check this condition if this condition is true then return as it is
+        if(arr[0] === 0 || arr[0] <= 5 || arr[0] > 5){
+            return arr
+        }
+        // find the first element of array
+        const firstElemt = arr[0];
+        // then slice the first array and multply by the firstelemet
+        const seconsElement = arr.slice(1).map((num)=>num*firstElemt);
+        // and return the first elemt as it is and add new element by using spered operator
+        return [firstElemt,...secondElement];
+    }
+    const array = [2,3,4,5,6,7,8,9];
+    const result = takeArray(array);
+    console.log(result);
+</script>

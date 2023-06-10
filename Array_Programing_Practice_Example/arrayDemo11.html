@@ -1,0 +1,17 @@
+<!-- How to find the missing number in a given interger array -->
+<script>
+    function missingValue(arr){
+        var newArray = [];
+        const minValue = Math.min(...arr);
+        const maxValue = Math.max(...arr);
+        for (let i=minValue; i<maxValue; i++){
+            if(arr.indexOf(i)<0){
+                newArray.push(i);
+            }
+        }
+        return newArray
+    }
+    const array = [1,2,3,5,7,8,9];
+    const result = missingValue(array);
+    console.log(result);
+</script>
