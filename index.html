@@ -1,0 +1,135 @@
+// 1 var a = 10
+// var b = 45
+// var temp = b
+// b = a
+// a = temp ;
+// var a = 10;
+// var b = 20;
+// [a,b]=[b,a];
+// console.log(`${a} ${b}`);
+
+// 2 write a program to merge two array and sort them in javascript
+// const arr1 = ['1','2','5'];
+// const arr2 = ['3','6'];
+// const newArr = arr1.concat(arr2);
+// const shortArr = newArr.sort(function(a,b){
+//     return a - b;
+// })
+// console.log(shortArr);
+
+// 3 write a program to find factors of a given interger in javascript
+// var a = 15;
+// for(let i = 0; i<= a; i++){
+//     if(a % i == 0){
+//         console.log(i);
+//     }
+// }
+
+// 4 write a program to compare two array are equal or not in javascript
+// var arr1 = [2,3,4,5,6];
+// var arr2 = [6,5,4,3,2,6,8,9];
+// var checkArr = arr1.length === arr2.length && 
+// arr1.every((current)=>{
+//     if(arr2.indexOf(current)>-1){
+//         return (current = [arr2.indexOf(current)]);
+//     };
+// });
+// console.log(checkArr);
+
+// 5 write a program to find the intersection of two arrays /sets in javascript
+// var arr1 = [3,4,5,5,5];
+// var arr2 = [,4,5,6,7];
+// var newArr = arr1.filter((e)=>{
+//     return arr2.includes(e);
+// })
+// console.log([...new Set(newArr)]);
+
+// 6 write a program to find the union of two array set in javascript
+// var arr1 = [2,3,4,5,6];
+// var arr2 = [5,6,7,8,9];
+// var newArr = [...arr1,...arr2];
+// console.log([...new Set(newArr)]);
+
+// 7 write a program to convert celsius to fahrenhei or fahrenheit to celsius in javascript
+// var a = 45;
+// var celsiusToFahrenheit = a *1.8+32
+// console.log(celsiusToFahrenheit);
+// var a = 45;
+// var fahrenheitToCelsius = 5/9 *(a-32)
+// console.log(fahrenheitToCelsius);
+
+// 8 write a program to convert km into miles in javascript
+// const km = 23;
+// const f = 0.621371;
+// var kmToMil = km * f;
+// console.log(kmToMil);
+
+// 9 write a program to convert first letter of a string into uppercase in javascript
+// var a = "hello worls"
+// const b = (c)=>{
+//     var c1 = c.split(" ");
+//     var newArr = c1.map((value)=>{
+//         return value.charAt(0).toUpperCase() + value.slice(1);
+//     });
+//     return newArr.join(" ");
+// }
+// console.log(b(a));
+
+// 10 write a program to find the sum of fibonacci sequence in javascript
+// var sum = 0;
+// var a = 0;
+// var b = 1
+// for(let i = 0; i<10; i++){
+//     sum = sum + a;
+//     let temp = a + b;
+//     a = b;
+//     b = temp;
+//     console.log(`fib(${i})=${sum}`);
+// }
+
+// 11 write a program to find the fibonacci sequence in javascript
+// var a = 0;
+// var b = 1;
+// for(let i = 0; i<8; i++){
+//     var temp = a+b;
+//     a = b;
+//     b = temp;
+//     console.log(temp);
+// }
+
+// 13 write a program to find number of occurrence of a character in a string
+// var a = "Hello";
+// var b = 'l';
+// var count = 0;
+// for(let i = 0; i < a.length; i++){
+//     if(a[i] === b){
+//         count++
+//     };
+// };
+// console.log(count);
+
+// 14 write a program to print the table of any user defiend number using function
+// function table(n){
+//     for(let i = 0; i <=10; i++){
+//         var res = i * n;
+//         console.log(`${n} * ${i} = ${res}`);
+//     }
+// }
+// let result = table(8);
+// console.log(result);
+
+// write a program to find the Armstrong number
+var number = prompt("Enter number");
+var temp = number;
+var length1 = number.length;
+var sum = 0;
+while(temp > 0){
+    var rem = temp % 10;
+    sum += rem ** length1;
+    temp = parseInt(temp / 10);
+}
+if(sum == number){
+    console.log(`${number} is an Armstring number`);
+}else{
+    console.log(`${number} is not an Armstring number`) ;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <style>
+      .topDiv {
+        background-color: red;
+        padding: 30px;
+      }
+      .middleDiv {
+        background-color: blue;
+        padding: 30px;
+      }
+      .bottomDiv {
+        background-color: green;
+        padding: 30px;
+      }
+    </style>
+    <script>
+      function topDiv() {
+        alert("Grand  Parent ");
+      }
+      function middleDiv() {
+        event.stopImmediatePropagation();
+        alert("Parent ");
+      }
+      function bottomDiv() {
+        alert("Child ");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="topDiv" onclick="topDiv()">
+      Grand Parent
+      <div class="middleDiv" onclick="middleDiv()">
+        Parent
+        <div class="bottomDiv" onclick="bottomDiv()">
+          Child
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
